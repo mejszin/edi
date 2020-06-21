@@ -1,0 +1,63 @@
+#login-grid {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+
+#field-wrapper {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+	padding: 0;
+}
+
+#field-grid {
+	display: grid;
+	width: 100%;
+	height: 100%;
+	grid-template-columns: 1fr;
+	grid-template-rows: 48px 48px 1fr;
+	grid-gap: 48px;
+}
+
+#field-grid > div {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+#field-grid label {
+	font-family: "Open Sans", sans-serif;
+	color: transparent;
+  	text-shadow: 0 0 0 #CCC;
+  	padding-bottom: 4px;
+}
+
+#email-field, #password-field {
+	box-sizing: border-box;
+	width: 100%;
+	border: 2px solid #CCC;
+	border-radius: 4px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	font-size: 1.2em;
+	padding: 8px 12px;
+	color: transparent;
+  	text-shadow: 0 0 0 #CCC;
+}
+
+#email-field:focus, #password-field:focus {
+	border: 2px solid #999;
+	text-shadow: 0 0 0 #999;
+}
+
+#email-field:focus + label#email-label {
+	text-shadow: 0 0 0 #999;
+}
+
+#password-field:focus + label#password-label {
+	text-shadow: 0 0 0 #999;
+}

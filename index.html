@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ShipDeck EDI</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+    <!--<script src="js/canvas.js"></script>-->
+  </head>
+
+  <body>
+    <!-- Login page -->
+    <div id = "login-grid">
+      <div id = "field-wrapper">
+        <div id = "field-grid">
+          <div>
+            <input id = "email-field"/>
+            <label id = "email-label" for = "email-field">Email</label>
+          </div>
+          <div>
+            <input id = "password-field" type = "password"/>
+            <label id = "password-label" for = "password-field">Password</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main dashboard -->
+    <div id = "grid">
+      <div id = "grid-top"></div>
+      <div id = "grid-bkg-title"></div>
+      <div id = "grid-title">
+        <h1>Dashboard</h1>
+      </div>
+      <div id = "grid-bkg-nav"></div>
+      <div id = "grid-nav">
+        <div id = "navigation">
+          <div><p>Dashboard</p></div>
+          <div class = "link"><p>Support</p></div>
+          <div class = "link"><p>Forum</p></div>
+          <div class = "link"><p>Settings</p></div>
+        </div>
+      </div>
+      <div id = "grid-sidebar"></div>
+      <div id = "grid-content">
+        <div id = "content">
+          <div class = "notice">
+            <p>Hello everyone!<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

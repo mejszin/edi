@@ -1,0 +1,173 @@
+Structure chart                         https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/031.htm#1ORDERS/SG12~460|1
+
+UNH         Message header              https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/051.htm
+                                        https://www.gs1.org/sites/default/files/docs/eancom/ean02s3/part3/dc31.htm#10065/ORDERS
+
+BGM         Beginning of message        https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/052.htm
+    +220        Order
+    +221        Blanket order
+    +224        Rush order
+    +225        Repair order
+    +226        Call off order
+    +227        Consignment order
+    +22E        Manufacturer raised order (GS1 Temporary Code)
+    +23E        Manufacturer raised consignment order (GS1 Temporary Code)
+    +258        Standing order
+    +237        Cross docking services order
+    +400        Exceptional order
+    +401        Transshipment order
+    +402        Cross docking order
+    +345        Ready for despatch advice
+    +351        Despatch advice
+    +35E        Returns advice (GS1 Temporary Code)
+    +YA5        Intermediate handling cross docking despatch advice (GS1 Temporary Code)
+    +YA6        Pre-packed cross docking [transshipment] despatch advice (GS1 Temporary Code)
+    +YA7        Consignment despatch advice (GS1 Temporary Code)
+    +YB3        Ready for transshipment despatch advice (GS1 Temporary Code)
+
+DTM         Date/time/period            https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/053.htm
+    +2 		    Delivery date/time, requested
+    +10 		Shipment date/time, requested
+    +11 		Despatch date and/or time
+    +15 		Promotion start date/time
+    +37 		Ship not before date/time
+    +38 		Ship not later than date/time
+    +61 		Cancel if not delivered by this date
+    +63 		Delivery date/time, latest
+    +64 		Delivery date/time, earliest
+    +69 		Delivery date/time, promised for
+    +76 		Delivery date/time, scheduled for
+    +X14 		Requested for delivery week commencing (GS1 Temporary Code)
+    +137 		Document/message date/time
+    +200 		Pick-up/collection date/time of cargo
+    +235 		Collection date/time, latest
+    +263 		Invoicing period
+    +273 		Validity period
+    +282 		Confirmation date lead time
+    +383 		Cancel if not shipped by this date
+
+PAI         Payment instructions        https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/054.htm
+
+ALI         Additional information      https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/055.htm
+
+FTX         Free text                   https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/056.htm
+
+RFF         Reference                   https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/057.htm
+    +AE 		Authorization for expense (AFE) number
+    +BO 		Blanket order number
+    +CR 		Customer reference number
+    +CT 		Contract number
+    +IP 		Import licence number
+    +ON 		Order number (buyer)
+    +PD 		Promotion deal number
+    +PL 		Price list number
+    +UC 		Ultimate customer's reference number
+    +VN 		Order number (supplier)
+    +AE 		Authorization for expense (AFE) number
+    +AKO 		Action authorization number
+    +ANJ 		Authorization number
+
+DTM         Date/time/period            https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/058.htm
+
+NAD         Name and address            https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/059.htm
+    +BY 		Buyer
+    +CO 		Corporate office
+    +DP 		Delivery party
+    +IV 		Invoicee
+    +SN 		Store number
+    +SR 		Supplier's agent/representative
+    +SU 		Supplier
+    +WH 		Warehouse keeper
+
+LOC         Place/location              https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0510.htm
+    +7   		Place of delivery
+
+FII         Financial institution       https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0511.htm
+    +BF         Beneficiary's bank
+
+RFF         Reference                   https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0512.htm
+    +ADE 		Account number
+    +AMT 		Goods and Services Tax identification number
+    +YC1 		Additional party identification (GS1 Temporary Code)
+    +FC 		Fiscal number
+    +GN 		Government reference number
+    +IA 		Internal vendor number
+    +IT 		Internal customer number
+    +TL 		Tax exemption licence number
+    +VA 		VAT registration number
+
+DOC         Documentation details       https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0513.htm
+
+CTA         Contact information         https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0514.htm
+    +BJ 		Department or person responsible for processing purchase order
+    +BO 		After business hours contact
+    +IC 		Information contact
+    +OC 		Order contact
+    +PD 		Purchasing contact
+    +SR 		Sales representative or department
+
+COM         Communication contact       https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0515.htm
+    :EM 		Electronic mail
+    :TE 		Telephone
+    :AO 		Uniform Resource Location (URL)
+
+TAX         Duty/tax/fee details        https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0516.htm
+    +5 		    Customs duty
+    +7 		    Tax
+
+MOA         Monetary amount             https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0517.htm
+    +124 		Tax amount
+    +125 		Taxable amount
+
+CUX         Currencies                  https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0518.htm
+    +2 		    Reference currency
+
+DTM         Date/time/period            https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0519.htm
+    +134 		Rate of exchange date/time
+    +194 		Start date/time
+    +206 		End date/time
+
+PAT         Payment term basis          https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0520.htm
+    +1 		    Basic
+    +3 		    Fixed date
+    +7 		    Extended
+    +20 	    Penalty terms
+    +22 	    Discount
+
+DTM         Date/time/period            https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0521.htm
+    +7 		    Effective date/time
+    +12 		Terms discount due date/time
+    +13 		Terms net due date
+    +209        Value date
+    +531        Payment period
+
+PCD         Percentage details          https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0522.htm
+    +12 		Discount
+    +15 		Penalty percentage
+    +16 		Interest percentage
+    +68 		Percentage of due amount
+
+MOA         Monetary amount             https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0523.htm    
+    +21 	    Cash discount
+    +23 	    Charge amount
+    +262    	Instalment amount
+
+TDT         Details of transport        https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0524.htm
+    +20         Main-carrage transport
+
+LOC         Place/location              https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0525.htm
+    +11 		Place/port of discharge
+    +24 		Port of entry
+
+DTM         Date/time/period            https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0526.htm
+    +189 		Departure date/time, scheduled
+    +232 		Arrival date/time, scheduled
+
+TOD         Delivery/transport terms    https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0527.htm
+    +3 		    Price and despatch condition
+    +5 		    Transport condition
+    +6 		    Delivery condition
+    +10E 		Delivered by supplier (GS1 Temporary Code)
+
+LOC         Place location              https://www.gs1.org/sites/default/files/docs/eancom/ean02s4/part2/orders/0528.htm
+

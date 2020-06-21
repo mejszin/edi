@@ -1,0 +1,49 @@
+APERAK,Application error and acknowledgement message
+AUTACK,Secure authentication and acknowledgement message
+BANSTA,Banking status message
+CNTCND,Contractual conditions message
+COACSU,Commercial account summary message
+COMDIS,Commercial dispute message
+CONDRA,Drawing administration message
+CONTRL,Syntax and service report message
+CREMUL,Multiple credit advice message
+DEBMUL,Multiple debit advice message
+DELFOR,Delivery schedule message
+DESADV,Despatch advice message
+DIRDEB,Direct debit message
+FINCAN,Financial cancellation message
+FINSTA,Financial statement of an account message
+GENRAL,General purpose message
+HANMOV,Cargo/goods handling and movement message
+IFCSUM,Forwarding and consolidation summary message
+IFTMAN,Arrival notice message
+IFTMBC,Booking confirmation message
+IFTMBF,Firm booking message
+IFTMIN,Instruction message
+IFTSTA,International multimodal status report message
+INSDES,Instruction to despatch message
+INVOIC,Invoice message
+INVRPT,Inventory report message
+KEYMAN,Security key and certificate management message
+MSCONS,Metered services consumption report message
+ORDCHG,Purchase order change request message
+ORDERS,Purchase order message
+ORDRSP,Purchase order response message
+OSTENQ,Order status enquiry message
+OSTRPT,Order status report message
+PARTIN,Party information message
+PAYDUC,Payroll deductions advice message
+PAYMUL,Multiple payment order message
+PRICAT,Price/sales catalogue message
+PRODAT,Product data message
+PROINQ,Product inquiry message
+QALITY,Quality data message
+QUOTES,Quote message
+RECADV,Receiving advice message
+REMADV,Remittance advice message
+REQOTE,Request for quote message
+RETANN,Announcement for returns message
+RETINS,Instruction for returns message
+SLSFCT,Sales forecast message
+SLSRPT,Sales data report message
+TAXCON,Tax control message
