@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:300');
 
-#console {
+#console-wrapper {
     display: flex;
-    padding: 8px 16px;
+    width: 100%;
+}
+
+#console {
+    width: 100%;
+    padding: 12px 16px;
     background-color: black;
     color: white;
     font-family: monospace;
     font-size: 16px;
+    line-height: 18px;
 }
