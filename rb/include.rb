@@ -1,8 +1,10 @@
 require 'rubygems'
 require 'bundler'
 Bundler.setup(:default, :ci)
+
 require 'firebase'
 
+require './rb/firebase.rb'
 require './rb/string.rb'
 require './rb/eancom/datetime.rb'
 require './rb/eancom/document.rb'

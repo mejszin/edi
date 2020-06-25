@@ -67,6 +67,7 @@ p {
 #grid-sidebar {
 	grid-column: 2 / 3;
 	grid-row: 4 / 5;
+	margin: 32px 0;
 }
 
 #grid-content {
@@ -106,10 +107,13 @@ p {
 	padding-top: 32px;
 	padding-left: 32px;
 	grid-template-columns: 1fr;
+	grid-gap: 16px;
+	align-self: flex-start;
 }
 
 #content > div {
 	display: flex;
+	align-self: flex-start;
 }
 
 #content > div.notice {
