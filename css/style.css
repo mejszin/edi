@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300');
+
 
 body {
 	margin: 0;
@@ -22,7 +24,7 @@ p {
 	width: 100vw;
 	/*min-height: 100vh;*/
 	grid-template-columns: 1fr 1fr 4fr 1fr;
-	grid-template-rows: 80px 120px 40px 1fr;
+	grid-template-rows: 64px 120px 40px 1fr;
 }
 
 #grid > div {
@@ -32,8 +34,22 @@ p {
 #grid-top {
 	grid-column: 1 / -1;
 	grid-row: 1 / 2;
+	display: flex;
+	align-items: center;
 	background-color: #36363B;
 	color: #FFFFFF;
+}
+
+#grid-top span {
+	font-size: 1.8em;
+	margin: 0 32px;
+}
+
+#grid-top p {
+	display: inline;
+	font-family: "Work Sans", sans-serif;
+	font-weight: 300;
+	padding-left: 16px;
 }
 
 #grid-bkg-title {
