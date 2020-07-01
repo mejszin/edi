@@ -19,19 +19,33 @@ end
 
 class Console
     def initialize
-        @lines = get_from_firebase("edi/console")
+        @lines = get_from_firebase("edi/console/test")
         @lines = [] if @lines == nil
     end
 
-    def add(line, type = "INFO")
+    def add_line(line, type = "INFO")
         prefix = "[#{Time.now.strftime("%H:%M:%S")}] [Server console/#{type}]: "
         @lines.prepend(prefix + line)
         @lines = @lines[0, 16]
-        success = send_to_firebase("edi", "console", @lines)
+        success = send_to_firebase("edi/console", "test", @lines)
+        puts success ? "Uploaded successfully." : "Failed to upload."
+    end
+
+    def add_error(text)
+        success = send_to_firebase("edi/error", 0, text)
         puts success ? "Uploaded successfully." : "Failed to upload."
     end
 end
 
 console = Console.new
-console.add("Starting server version #{VERSION}")
-console.add("Uploading BOL \"12345AB\"")
+
+#console.add_line("Starting server version #{VERSION}")
+
+(0...10).each do
+    o = [('a'..'z'), ('A'..'Z'), ('0'..'9')].map(&:to_a).flatten
+    id = (0...12).map { o[rand(o.length)] }.join
+    console.add_line("Validating BOL \"#{id}\"")
+    console.add_line("Uploading BOL \"#{id}\"")
+end
+
+#console.add_error("BOL \"12345AB\" failed to upload")

@@ -1,0 +1,36 @@
+.server {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: black;
+    border-bottom: 1px solid lightgrey;
+}
+
+.server span {
+    padding: 16px 16px;
+}
+
+.server h1 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.server p {
+    margin: 0;
+    margin-top: 2px;
+    font-size: 0.75em;
+}
+
+.server a {
+    color: #4183C4;
+    text-decoration: none;
+}
+
+.server .running {
+    color: green;
+
+}
+
+.server .stopped {
+    color: #FF3333;
+}

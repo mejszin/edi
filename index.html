@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="css/console.css">
+    <link rel="stylesheet" type="text/css" href="css/server.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-database.js"></script>
@@ -35,7 +36,7 @@
     <div id = "grid">
       <div id = "grid-top">
         <span>
-          <i class="fas fa-sync"></i><p>EDiPanel</p>
+          <a href="."><i class="fas fa-sync"></i><p>EDiPanel</p></a>
         </span>
       </div>
       <div id = "grid-bkg-title"></div>
@@ -52,18 +53,37 @@
         </div>
       </div>
       <div id = "grid-sidebar">
-
-        <a class="twitter-timeline" data-height="720px" href="https://twitter.com/mejszin/lists/tweets?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>       
-
+        <a class="twitter-timeline" data-height="720px" href="https://twitter.com/mejszin/lists/tweets?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
       <div id = "grid-content">
         <div id = "content">
           <div class = "notice">
             <p>Hello everyone!<br><br><b>Lorem ipsum</b> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
-          <div id = "console-wrapper">
-            <span id = "console"></span>
+          <div class = "server">
+            <i class="far fa-hdd fa-3x" style="transform: scale(0.75,0.8); color: grey"></i>
+            <span>
+              <a href="javascript:testDashboard();"><h1>Testing platform</h1></a>
+              <p class = "running"><i class="fas fa-check" style="margin-right: 8px"></i>Running</p>
+            </span>
           </div>
+          <div class = "server">
+            <i class="far fa-hdd fa-3x" style="transform: scale(0.75,0.8); color: grey"></i>
+            <span>
+              <a href = "#"><h1>Build platform</h1></a>
+              <p class = "stopped"><i class="fas fa-times" style="margin-right: 8px"></i>Stopped</p>
+            </span>
+          </div>
+          <div class = "server">
+            <i class="far fa-hdd fa-3x" style="transform: scale(0.75,0.8); color: grey"></i>
+            <span>
+              <a href = "#"><h1>89.34.96.141:25605</h1></a>
+              <p class = "stopped"><i class="fas fa-times" style="margin-right: 8px"></i>Stopped</p>
+            </span>
+          </div>
+          <!--<div id = "console-wrapper">
+            <span id = "console"></span>
+          </div>-->
           <div></div>
         </div>
       </div>
