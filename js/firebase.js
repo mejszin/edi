@@ -68,7 +68,7 @@ function writeConsole() {
 
 function writeErrors() {
     let div = document.getElementById('errors');
-    if (div != null) {
+    if (div != null && errors != null) {
         for (var i = 0; i < errors.length; i++) {
             let elt = createP(errors[i]);
             elt.class('error');
@@ -80,6 +80,9 @@ function writeErrors() {
 function testDashboard() {
     let div = document.getElementById('content');
     div.innerHTML = '';
+    // Set title
+    let title = document.getElementById('page-title');
+    title.innerHTML = 'Dashboard <p style = "display: inline; font-size: 0.65em">/ Server address: vps.machin.dev';
     // Create errors wrapper
     let wrapper = createDiv();
     wrapper.id('errors');
@@ -114,4 +117,23 @@ function testDashboard() {
     btn = createElement('li');
     btn.html('<a href = ""><i class="fas fa-caret-down"></i></a>');
     btn.parent(list);
+    // Create sidebar links
+    elt = createDiv();
+    elt.id('sidebar-links');
+    elt.parent(div);
+    list = createElement('ul');
+    list.parent(elt);
+    btn = createElement('li');
+    btn.html('Console');
+    btn.parent(list);
+    btn = createElement('li');
+    btn.html('<a href = "">Server manager</a>');    
+    btn.parent(list);
+    btn = createElement('li');
+    btn.html('<a href = "">Archived messages</a>');   
+    btn.parent(list);
+    btn = createElement('li');
+    btn.html('<a href = "">Reports</a>');
+    btn.parent(list);
+
 }
