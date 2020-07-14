@@ -41,11 +41,15 @@ console = Console.new
 
 #console.add_line("Starting server version #{VERSION}")
 
+#(0...10).each do
+#    o = [('a'..'z'), ('A'..'Z'), ('0'..'9')].map(&:to_a).flatten
+#    id = (0...12).map { o[rand(o.length)] }.join
+#    console.add_line("Validating BOL \"#{id}\"")
+#    console.add_line("Uploading BOL \"#{id}\"")
+#end
+
 (0...10).each do
-    o = [('a'..'z'), ('A'..'Z'), ('0'..'9')].map(&:to_a).flatten
-    id = (0...12).map { o[rand(o.length)] }.join
-    console.add_line("Validating BOL \"#{id}\"")
-    console.add_line("Uploading BOL \"#{id}\"")
+    console.add_line("Hey Joshy!")
 end
 
 #console.add_error("BOL \"12345AB\" failed to upload")
