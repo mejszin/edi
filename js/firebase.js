@@ -22,12 +22,23 @@ function preload() {
 	firebase.initializeApp(firebaseConfig);
 	firebase.analytics();
     database = firebase.database();
+    // Auth
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            //firebase.auth().signOut() 
+            tryUser();
+        } else {
+          // No user is signed in.
+            showLogin();
+        }
+    });
 	// Console event
 	var ref = database.ref('edi/console/test');
     ref.on('value', gotConsoleData, errConsoleData);
 	// Error event
 	var ref = database.ref('edi/error');
     ref.on('value', gotErrorData, errErrorData);
+    
 }
 
 function setup() {
@@ -82,7 +93,7 @@ function testDashboard() {
     div.innerHTML = '';
     // Set title
     let title = document.getElementById('page-title');
-    title.innerHTML = 'Dashboard <p style = "display: inline; font-size: 0.65em">/ Server address: vps.machin.dev';
+    title.innerHTML = 'Dashboard <p style = "display: inline; font-weight: 400; font-size: 0.65em">/ Server address: vps.machin.dev';
     // Create errors wrapper
     let wrapper = createDiv();
     wrapper.id('errors');
@@ -134,6 +145,9 @@ function testDashboard() {
     btn.parent(list);
     btn = createElement('li');
     btn.html('<a href = "">Reports</a>');
+    btn.parent(list);
+    btn = createElement('li');
+    btn.html('<a href = "./external_docs.html">External documentation</a>');
     btn.parent(list);
 
 }

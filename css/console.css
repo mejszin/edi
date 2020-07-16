@@ -9,6 +9,9 @@
     width: 100%;
     padding: 12px 16px;
     background-color: black;
+}
+
+#console > p {
     color: white;
     font-family: monospace;
     font-size: 16px;
@@ -56,6 +59,10 @@
     background-color: white;
     border-right: 1px solid #CCCCCC;
     cursor: pointer;
+}
+
+#server-controls a {
+    color: inherit;
 }
 
 #server-controls li:first-child {

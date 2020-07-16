@@ -2,62 +2,133 @@
 	display: none;
 	width: 100vw;
 	height: 100vh;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1.6fr 0.8fr 1fr;
+	grid-template-rows: 64px 240px 1fr;
+	grid-column-gap: 32px;
 }
 
-#field-wrapper {
+#login-grid > div {
 	display: flex;
-	width: 100%;
-	height: 100%;
-	grid-column: 2 / 3;
+}
+
+#login-grid #grid-top {
+	grid-column: 1 / -1;
+	grid-row: 1 / 2;
+	display: flex;
+	align-items: center;
+	background-color: #36363B;
+}
+
+#login-grid #grid-top span {
+	font-size: 1.8em;
+	margin: 0 32px;
+}
+
+#login-grid #grid-top p {
+	display: inline;
+	font-family: "Work Sans", sans-serif;
+	font-weight: 300;
+	padding-left: 16px;
+	color: white;
+}
+
+#login-grid #title {
+	grid-column: 2 / -2;
 	grid-row: 2 / 3;
-	padding: 0;
+	flex-direction: column;
+	justify-content: flex-end;
+	border-bottom: 1px solid #EEEEEE;
+	padding: 32px 0;
 }
 
-#field-grid {
-	display: grid;
-	width: 100%;
-	height: 100%;
-	grid-template-columns: 1fr;
-	grid-template-rows: 48px 48px 1fr;
-	grid-gap: 48px;
+#login-grid #title h1, p {
+	font-family: "Work Sans", sans-serif;
+	color: #333333;
+	margin: 0;
 }
 
-#field-grid > div {
-	display: flex;
-	flex-direction: column-reverse;
+#login-grid #title h1 {
+	font-size: 2.4em;
+	font-weight: 500;
 }
 
-#field-grid label {
-	font-family: "Open Sans", sans-serif;
-	color: transparent;
-  	text-shadow: 0 0 0 #CCC;
-  	padding-bottom: 4px;
-}
-
-#email-field, #password-field {
-	box-sizing: border-box;
-	width: 100%;
-	border: 2px solid #CCC;
-	border-radius: 4px;
-	font-family: "Open Sans", sans-serif;
-	font-weight: 400;
+#login-grid #title p {
 	font-size: 1.2em;
+	font-weight: 300;
+}
+
+
+#login-grid #fields {
+	grid-column: 2 / 3;
+	grid-row: 3 / 4;
+	flex-direction: column;
+	padding: 16px 0;
+}
+
+#login-grid #fields > div {
+	display: flex;
+	flex-direction: column;
+}
+
+#login-grid #fields > div > label {
+	font-size: 0.9em;
+	font-weight: 900;
+	color: #777777;
+	margin: 8px 0;
+	margin-bottom: 0px;
+}
+
+#login-grid #fields > div > input {
+	background-color: #FFF8C5;
+	border: 1px solid #E9D2A7;
+	border-radius: 4px;
+	margin: 8px 0;
+	padding: 8px;
+}
+
+#login-grid #fields > div > input.failed-attempt {
+	background-color: #F7D6DA;
+}
+
+#login-grid #fields > div > p {
+	font-family: sans-serif;
+	font-size: 0.8em;
+	font-weight: thin;
+	color: #777777;
+	margin: 12px 0;
+	margin-top: 0px;
+	border: none;
+}
+
+#login-grid input:focus {
+	box-shadow: 0px 0px 2px #00DDFF;
+}
+
+
+#login-grid #notice {
+	grid-column: -3 / -2;
+	grid-row: 3 / 4;
+	padding: 16px 0;
+}
+
+#login-grid a.button {
+	display: inline-block;
+	background-color: #333333;
+	border-radius: 4px;
 	padding: 8px 12px;
-	color: transparent;
-  	text-shadow: 0 0 0 #CCC;
+	margin: 16px 0;
 }
 
-#email-field:focus, #password-field:focus {
-	border: 2px solid #999;
-	text-shadow: 0 0 0 #999;
+#login-grid a.button > p {
+	color: #FFFFFF;
 }
 
-#email-field:focus + label#email-label {
-	text-shadow: 0 0 0 #999;
+#login-grid a.button > p:hover {
+	color: #DDDDDD;
 }
 
-#password-field:focus + label#password-label {
-	text-shadow: 0 0 0 #999;
+#login-grid #seperator {
+	height: 1px;
+	margin: 8px 0;
+	background-color: #EEEEEE;
 }

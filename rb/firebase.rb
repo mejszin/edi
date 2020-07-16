@@ -48,8 +48,10 @@ console = Console.new
 #    console.add_line("Uploading BOL \"#{id}\"")
 #end
 
-(0...10).each do
-    console.add_line("Hey Joshy!")
-end
+#(0...10).each do
+#    console.add_line("Hey Joshy!")
+#end
+
+console.add_line("This is a test message!")
 
 #console.add_error("BOL \"12345AB\" failed to upload")

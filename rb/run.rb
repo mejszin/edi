@@ -1,11 +1,11 @@
 require './rb/include.rb'
 
 #path = "./files/test.eancom"
-path = "./files/desadv.eancom"
-lines = File.readlines(path)
-
-document = Document.new(lines)
-data = document.as_hash()
+#path = "./files/desadv.eancom"
+#lines = File.readlines(path)
+#
+#document = Document.new(lines)
+#data = document.as_hash()
 
 #result = send_to_firebase("edi", data)
 #puts result ? "Uploaded successfully." : "Failed to upload."

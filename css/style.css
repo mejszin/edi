@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400');
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500');
 
+.hidden {
+	display: none;
+}
 
 body {
 	margin: 0;
@@ -25,7 +28,7 @@ a {
 }
 
 #grid {
-	display: grid;
+	display: none;
 	width: 100vw;
 	/*min-height: 100vh;*/
 	grid-template-columns: 2fr 2.5fr 7fr 2fr;
@@ -36,34 +39,34 @@ a {
 	display: flex;
 }
 
-#grid-top {
+#grid #grid-top {
 	grid-column: 1 / -1;
 	grid-row: 1 / 2;
 	display: flex;
 	align-items: center;
 	background-color: #36363B;
-	color: #FFFFFF;
 }
 
-#grid-top span {
+#grid #grid-top span {
 	font-size: 1.8em;
 	margin: 0 32px;
 }
 
-#grid-top p {
+#grid #grid-top p {
 	display: inline;
 	font-family: "Work Sans", sans-serif;
 	font-weight: 300;
 	padding-left: 16px;
+	color: #FFFFFF;
 }
 
-#grid-bkg-title {
+#grid #grid-bkg-title {
 	grid-column: 1 / -1;
 	grid-row: 2 / 3;
 	background-color: #F9F9F9;
 }
 
-#grid-title {
+#grid #grid-title {
 	display: flex;
 	padding-top: 32px;
 	align-items: center;
@@ -72,20 +75,20 @@ a {
 	color: #000000;
 }
 
-#grid-bkg-nav {
+#grid #grid-bkg-nav {
 	grid-column: 1 / -1;
 	grid-row: 3 / 4;
 	background-color: #F9F9F9;
 	border-bottom: 2px solid #DADCE0;
 }
 
-#grid-nav {
+#grid #grid-nav {
 	grid-column: 2 / -2;
 	grid-row: 3 / 4;
 	background-color: #FFFFFF;
 }
 
-#grid-sidebar {
+#grid #grid-sidebar {
 	display: flex;
 	flex-direction: column;
 	grid-column: 2 / 3;
@@ -93,12 +96,12 @@ a {
 	margin: 32px 0;
 }
 
-#grid-content {
+#grid #grid-content {
 	grid-column: -3 / -2;
 	grid-row: 4 / 5;
 }
 
-#navigation {
+#grid #navigation {
 	display: flex;
 	width: 100%;
 	color: black;
@@ -107,7 +110,7 @@ a {
 	border-right: 1px solid #DADCE0;
 }
 
-#navigation > div {
+#grid #navigation > div {
 	display: flex;
 	width: 100%;
 	justify-content: center;
@@ -118,10 +121,22 @@ a {
 	border-right: 1px solid #DADCE0;
 }
 
-#navigation > div.link {
+#grid #navigation > div.link {
 	background-color: #E9E9E9;
 	border-bottom: 2px solid #DADCE0;
 	cursor: pointer;
+}
+
+#grid #navigation a {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+#grid #navigation p {
+	font-weight: 400;
 }
 
 #content {
@@ -146,9 +161,4 @@ a {
 	border: 1px solid #BAE7F0;
 	color: #346F8D;
 	padding: 16px;
-}
-
-
-#sidebar-links {
-    color: blue;
 }

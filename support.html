@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>EDiPanel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/icons.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/console.css">
+    <link rel="stylesheet" type="text/css" href="css/server.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+    <script src="js/firebase.js"></script>
+  </head>
+
+  <body>
+    <!-- Login page -->
+    <div id = "login-grid">
+      <div id = "grid-top">
+        <span>
+          <a href="."><!--<i class="fas fa-sync">--></i><p>EDiPanel</p></a>
+        </span>
+      </div>
+      <div id = "title">
+        <h1>Sign in to EDiPanel</h1>
+        <p>You are just seconds away from accessing your data.</p>
+      </div>
+      <div id = "fields">
+        <div>
+          <label id = "email-label" for = "email-field">Email</label>
+          <input id = "email-field"/>
+          <p>Your email address you purchased the server with</p>
+        </div>
+        <div>
+          <label id = "password-label" for = "password-field">Password</label>
+          <input id = "password-field" type = "password"/>
+          <p>Type your password above so we know its you</p>
+        </div>
+        <div id = "seperator"></div>
+        <div>
+          <span>
+            <a href = "#" class = "button" function = "signIn()"><p>Sign in Securely</p></a>
+          </span>
+        </div>
+      </div>
+      <div id = "notice">
+      </div>
+    </div>
+    <!-- Main dashboard -->
+    <div id = "grid">
+      <div id = "grid-top">
+        <span>
+            <a href="."><!--<i class="fas fa-sync">--></i><p>EDiPanel</p></a>
+        </span>
+      </div>
+      <div id = "grid-bkg-title"></div>
+      <div id = "grid-title">
+        <h1 id = "page-title">Support</h1>
+      </div>
+      <div id = "grid-bkg-nav"></div>
+      <div id = "grid-nav">
+        <div id = "navigation">
+          <div class = "link"><a href = "./index.html"><p>Dashboard</p></a></div>
+          <div><p>Support</p></div>
+          <div class = "link"><a href = "./forum.html"><p>Forum</p></a></div>
+          <div class = "link"><a href = "./settings.html"><p>Settings</p></a></div>
+        </div>
+      </div>
+      <div id = "grid-sidebar">
+        <a class="twitter-timeline" data-height="720px" href="https://twitter.com/mejszin/lists/tweets?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+      <div id = "grid-content">
+        
+      </div>
+    </div>
+    <script src="js/login.js"></script>
+  </body>
+</html>

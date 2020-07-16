@@ -10,7 +10,8 @@
     <link rel="stylesheet" type="text/css" href="css/console.css">
     <link rel="stylesheet" type="text/css" href="css/server.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
     <script src="js/firebase.js"></script>
@@ -19,24 +20,41 @@
   <body>
     <!-- Login page -->
     <div id = "login-grid">
-      <div id = "field-wrapper">
-        <div id = "field-grid">
-          <div>
-            <input id = "email-field"/>
-            <label id = "email-label" for = "email-field">Email</label>
-          </div>
-          <div>
-            <input id = "password-field" type = "password"/>
-            <label id = "password-label" for = "password-field">Password</label>
-          </div>
+      <div id = "grid-top">
+        <span>
+          <a href="."><!--<i class="fas fa-sync">--></i><p>EDiPanel</p></a>
+        </span>
+      </div>
+      <div id = "title">
+        <h1>Sign in to EDiPanel</h1>
+        <p>You are just seconds away from accessing your data.</p>
+      </div>
+      <div id = "fields">
+        <div>
+          <label id = "email-label" for = "email-field">Email</label>
+          <input id = "email-field"/>
+          <p>Your email address you purchased the server with</p>
         </div>
+        <div>
+          <label id = "password-label" for = "password-field">Password</label>
+          <input id = "password-field" type = "password"/>
+          <p>Type your password above so we know its you</p>
+        </div>
+        <div id = "seperator"></div>
+        <div>
+          <span>
+            <a href = "#" class = "button" function = "signIn()"><p>Sign in Securely</p></a>
+          </span>
+        </div>
+      </div>
+      <div id = "notice">
       </div>
     </div>
     <!-- Main dashboard -->
     <div id = "grid">
       <div id = "grid-top">
         <span>
-          <a href="."><i class="fas fa-sync"></i><p>EDiPanel</p></a>
+          <a href="."><!--<i class="fas fa-sync">--></i><p>EDiPanel</p></a>
         </span>
       </div>
       <div id = "grid-bkg-title"></div>
@@ -47,9 +65,9 @@
       <div id = "grid-nav">
         <div id = "navigation">
           <div><p>Dashboard</p></div>
-          <div class = "link"><p>Support</p></div>
-          <div class = "link"><p>Forum</p></div>
-          <div class = "link"><p>Settings</p></div>
+          <div class = "link"><a href = "./support.html"><p>Support</p></a></div>
+          <div class = "link"><a href = "./forum.html"><p>Forum</p></a></div>
+          <div class = "link"><a href = "./settings.html"><p>Settings</p></a></div>
         </div>
       </div>
       <div id = "grid-sidebar">
@@ -91,5 +109,6 @@
         </div>
       </div>
     </div>
+    <script src="js/login.js"></script>
   </body>
 </html>
