@@ -52,6 +52,6 @@ console = Console.new
 #    console.add_line("Hey Joshy!")
 #end
 
-console.add_line("This is a test message!")
+#console.add_line("This is a test message!")
 
 #console.add_error("BOL \"12345AB\" failed to upload")
