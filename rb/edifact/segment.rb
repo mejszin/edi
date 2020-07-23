@@ -1,3 +1,5 @@
+CONTEXTUAL_IDS = ["RFF"]
+
 class Segment
   def initialize(str)
     @data = decontruct(str)
@@ -12,8 +14,12 @@ class Segment
     return @data.first
   end
 
+  def context()
+    return CONTEXTUAL_IDS.include?(id()) ? parse() : nil
+  end
+
   def parse()
-    return case @data.first
+    return case id()
       when "UNB"; unb()
       when "UNH"; unh()
       when "BGM"; bgm()

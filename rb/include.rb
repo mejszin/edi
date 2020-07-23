@@ -4,15 +4,18 @@ Bundler.setup(:default, :ci)
 
 require 'firebase'
 
+require 'curses'
+include Curses
+
 require './rb/firebase.rb'
 require './rb/string.rb'
-require './rb/eancom/datetime.rb'
-require './rb/eancom/document.rb'
-require './rb/eancom/group.rb'
-require './rb/eancom/segment.rb'
-require './rb/eancom/segments/bgm.rb'
-require './rb/eancom/segments/dtm.rb'
-require './rb/eancom/segments/nad.rb'
-require './rb/eancom/segments/rff.rb'
-require './rb/eancom/segments/unb.rb'
-require './rb/eancom/segments/unh.rb'
+require './rb/edifact/datetime.rb'
+require './rb/edifact/document.rb'
+require './rb/edifact/group.rb'
+require './rb/edifact/segment.rb'
+require './rb/edifact/segments/bgm.rb'
+require './rb/edifact/segments/dtm.rb'
+require './rb/edifact/segments/nad.rb'
+require './rb/edifact/segments/rff.rb'
+require './rb/edifact/segments/unb.rb'
+require './rb/edifact/segments/unh.rb'

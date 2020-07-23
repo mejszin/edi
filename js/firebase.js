@@ -147,7 +147,7 @@ function testDashboard() {
     btn.html('<a href = "">Reports</a>');
     btn.parent(list);
     btn = createElement('li');
-    btn.html('<a href = "./external_docs.html">External documentation</a>');
+    btn.html('<a href = "./public_docs.html">Public documentation</a>');
     btn.parent(list);
 
 }

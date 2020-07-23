@@ -16,11 +16,16 @@ def get_from_firebase(path)
     return firebase.get(path).body
 end
 
-
 class Console
     def initialize
         @lines = get_from_firebase("edi/console/test")
         @lines = [] if @lines == nil
+    end
+
+    def add_lines(lines, type = "INFO")
+        lines.each do |line|
+            add_line(line, type)
+        end
     end
 
     def add_line(line, type = "INFO")
@@ -28,16 +33,19 @@ class Console
         @lines.prepend(prefix + line)
         @lines = @lines[0, 16]
         success = send_to_firebase("edi/console", "test", @lines)
-        puts success ? "Uploaded successfully." : "Failed to upload."
+        #puts success ? "Uploaded successfully." : "Failed to upload."
     end
 
     def add_error(text)
         success = send_to_firebase("edi/error", 0, text)
-        puts success ? "Uploaded successfully." : "Failed to upload."
+        #puts success ? "Uploaded successfully." : "Failed to upload."
+    end
+
+    def clear
+        lines = Array.new(16) { "\\" }
+        success = send_to_firebase("edi/console", "test", lines)
     end
 end
-
-console = Console.new
 
 #console.add_line("Starting server version #{VERSION}")
 

@@ -1,8 +1,8 @@
-
 # Get arguments
 input_path = ARGV[0]
 export_path = ARGV[1]
 title = ARGV.length > 2 ? ARGV[2] : ""
+
 def csv_to_html(input_path, export_path, title)
     # Return if invalid file path
     return unless File.exist?(input_path)
