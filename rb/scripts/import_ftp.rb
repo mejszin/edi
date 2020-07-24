@@ -4,22 +4,6 @@ require './rb/include.rb'
 
 DEBUG_MODE = true
 
-puts "HELLO WORLD!!! - Ruby"
-
-dir_path = "/home/ftpuser/ftp/"
-
-Dir.foreach(dir_path) do |file_path|
-    unless file_path == '.' || file_path == '..'
-        if ['.txt'].include?(File.extname(file_path))
-            full_path = File.join(dir_path, file_path)
-            lines = File.readlines(full_path)
-            puts lines.inspect
-            File.delete(full_path)
-            translate(full_path, lines)
-        end
-    end
-end
-
 def translate(file_path, lines)
     contexts = []
 
@@ -53,4 +37,18 @@ def translate(file_path, lines)
     # Write JSON
     write_path = File.basename(file_path, File.extname(file_path)) + ".json"
     File.write(write_path, document.as_hash().to_json) 
+end
+
+dir_path = "/home/ftpuser/ftp/"
+
+Dir.foreach(dir_path) do |file_path|
+    unless file_path == '.' || file_path == '..'
+        if ['.txt'].include?(File.extname(file_path))
+            full_path = File.join(dir_path, file_path)
+            lines = File.readlines(full_path)
+            puts lines.inspect
+            File.delete(full_path)
+            translate(full_path, lines)
+        end
+    end
 end
