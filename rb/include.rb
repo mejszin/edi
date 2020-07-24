@@ -3,6 +3,7 @@ require 'bundler'
 Bundler.setup(:default, :ci)
 
 require 'firebase'
+require 'json'
 
 require 'curses'
 include Curses

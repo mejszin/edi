@@ -35,8 +35,10 @@ def translate(file_path, lines)
     end
 
     # Write JSON
+    puts document.as_hash()
     write_path = File.basename(file_path, File.extname(file_path)) + ".json"
-    File.write(write_path, document.as_hash().to_json) 
+    success = File.write(write_path, document.as_hash().to_json) 
+    puts success ? "Successfully created #{write_path}" : "Could not create JSON file"
 end
 
 dir_path = "/home/ftpuser/ftp/"
@@ -46,7 +48,6 @@ Dir.foreach(dir_path) do |file_path|
         if ['.txt'].include?(File.extname(file_path))
             full_path = File.join(dir_path, file_path)
             lines = File.readlines(full_path)
-            puts lines.inspect
             File.delete(full_path)
             translate(full_path, lines)
         end
