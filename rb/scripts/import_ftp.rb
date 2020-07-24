@@ -2,7 +2,8 @@
 
 require './rb/include.rb'
 
-DEBUG_MODE = true
+DEBUG_MODE = false
+ROOT_PATH = "/home/ftpuser/ftp/"
 
 def translate(file_path, lines)
     contexts = []
@@ -35,18 +36,16 @@ def translate(file_path, lines)
     end
 
     # Write JSON
-    puts document.as_hash()
-    write_path = File.basename(file_path, File.extname(file_path)) + ".json"
+    file_name = File.basename(file_path, File.extname(file_path))
+    write_path = ROOT_PATH + file_name  + ".json"
     success = File.write(write_path, document.as_hash().to_json) 
     puts success ? "Successfully created #{write_path}" : "Could not create JSON file"
 end
 
-dir_path = "/home/ftpuser/ftp/"
-
-Dir.foreach(dir_path) do |file_path|
+Dir.foreach(ROOT_PATH) do |file_path|
     unless file_path == '.' || file_path == '..'
         if ['.txt'].include?(File.extname(file_path))
-            full_path = File.join(dir_path, file_path)
+            full_path = File.join(ROOT_PATH, file_path)
             lines = File.readlines(full_path)
             File.delete(full_path)
             translate(full_path, lines)
