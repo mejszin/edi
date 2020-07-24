@@ -27,6 +27,12 @@ def translate(file_path, lines)
         message << "- #{key}: #{value}"
     end
 
+    # Write JSON
+    file_name = File.basename(file_path, File.extname(file_path))
+    write_path = ROOT_PATH + file_name  + ".json"
+    success = File.write(write_path, document.as_hash().to_json) 
+    message << success ? "Successfully created #{write_path}" : "Could not create JSON file"
+
     # Send information to Firebase console
     unless DEBUG_MODE
         console = Console.new
@@ -34,12 +40,6 @@ def translate(file_path, lines)
     else
         puts message
     end
-
-    # Write JSON
-    file_name = File.basename(file_path, File.extname(file_path))
-    write_path = ROOT_PATH + file_name  + ".json"
-    success = File.write(write_path, document.as_hash().to_json) 
-    puts success ? "Successfully created #{write_path}" : "Could not create JSON file"
 end
 
 Dir.foreach(ROOT_PATH) do |file_path|
