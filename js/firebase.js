@@ -149,5 +149,4 @@ function testDashboard() {
     btn = createElement('li');
     btn.html('<a href = "./public_docs.html">Public documentation</a>');
     btn.parent(list);
-
 }
