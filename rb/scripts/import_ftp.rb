@@ -6,6 +6,7 @@ DEBUG_MODE = false
 ROOT_PATH = "/home/ftpuser/ftp/"
 
 def translate(file_path, lines)
+    # Include all contexts
     contexts = []
 
     # Parse EDI document

@@ -18,6 +18,7 @@ class Segment
       when "SU"; "supplier"
       when "WH"; "warehouse_keeper"
       when "SH"; "shipper"
+      when "SF"; "ship_from"
     else
       "unknown_name_identifier_#{@data[1]}"
     end

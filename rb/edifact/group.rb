@@ -10,6 +10,7 @@ class Group
     context = "unknown_context_#{@segments.first.id}"
     case @segments.first.id
       when "NAD"; context = @segments.first.nad_context()
+      when "CPS"; context = @segments.first.cps_context()
     else
       INDEX_ORDER.each { |id, desc| context = desc if id == @segments.first.id }
     end

@@ -8,7 +8,8 @@ INDEX_ORDER = [
   ["TAX", "tax"],
   ["CUX", "currency"],
   ["PAT", "payment_terms"],
-  ["TDT", "transport_details"]
+  ["TDT", "transport_details"],
+  ["CPS", "consignment"]
 ]
 
 class Document

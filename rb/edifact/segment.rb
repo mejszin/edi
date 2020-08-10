@@ -1,17 +1,24 @@
 CONTEXTUAL_IDS = ["RFF"]
 
 class Segment
+  attr_accessor :raw
+
   def initialize(str)
+    @raw = str
     @data = decontruct(str)
   end
 
   def decontruct(str)
-    arr = str.split("+").map { |a| a.split(":") }
+    arr = str.split("+").map { |a| a == "" ? [a] : a.split(":") }
     return arr.flatten
   end
 
   def id()
     return @data.first
+  end
+
+  def length()
+    return @data.length
   end
 
   def context()
@@ -26,6 +33,9 @@ class Segment
       when "DTM"; dtm()
       when "NAD"; nad()
       when "RFF"; rff()
+      when "LIN"; lin()
+      when "QTY"; qty()
+      when "PAC"; pac()
     else
       {}
     end 
