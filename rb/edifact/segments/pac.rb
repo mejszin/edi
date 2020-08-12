@@ -1,21 +1,18 @@
 class Segment
   def pac()
-    return case @data[3]
-      when "09" ; { "returnable_pallet" => @data[1] }
-      when "201"; { "pallet" => @data[1] }
-      when "PK" ; { "package" => @data[1] }
-      when "SL" ; { "slipsheet" => @data[1] }
-      when "CT" ; { "carton" => @data[1] }
-    else
-      case @data[4]
-        when "09" ; { "returnable_pallet" => @data[1] }
-        when "201"; { "pallet" => @data[1] }
-        when "PK" ; { "package" => @data[1] }
-        when "SL" ; { "slipsheet" => @data[1] }
-        when "CT" ; { "carton" => @data[1] }
-      else
-        { "reference" => "unknown_identifier"}
-      end
+    desc = pac_attr(@data[3])
+    desc = pac_attr(@data[4]) unless desc
+    return { "reference" => "unknown_identifier"} unless desc
+    return { desc => @data[1] }
+  end
+
+  def pac_attr(code)
+    return case code
+      when "09" ; "returnable_pallet"
+      when "201"; "pallet"
+      when "PK" ; "package"
+      when "SL" ; "slipsheet"
+      when "CT" ; "carton"
     end
   end
 end
