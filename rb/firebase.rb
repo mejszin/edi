@@ -41,6 +41,11 @@ class Console
         #puts success ? "Uploaded successfully." : "Failed to upload."
     end
 
+    def clear_errors(text)
+        lines = Array.new(16) { "\\" }
+        success = send_to_firebase("edi/error", "test", lines)
+    end
+
     def clear
         lines = Array.new(16) { "\\" }
         success = send_to_firebase("edi/console", "test", lines)

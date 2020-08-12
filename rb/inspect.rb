@@ -24,9 +24,9 @@ show_json = (ARGV[1] == "-json") if ARGV.length > 1
 lines = File.readlines(file_path)
 document = Document.new(lines)
 
+# Display output
 if show_json
-    puts document.as_hash()
-    puts document.context()
+    puts document.as_hash(), document.context()
 else
     # Get contextual information from EDI document
     context = []

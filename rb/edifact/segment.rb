@@ -36,6 +36,7 @@ class Segment
       when "LIN"; lin()
       when "QTY"; qty()
       when "PAC"; pac()
+      when "MEA"; mea()
     else
       {}
     end 
