@@ -1,4 +1,6 @@
 require './rb/include.rb'
+require 'curses'
+include Curses
 
 
 def background_text()
